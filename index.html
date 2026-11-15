@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yildiz · Joyería</title>
   <meta name="description" content="Yildiz — joyas delicadas para regalar y regalarte. Give & love.">
+  <meta name="theme-color" content="#886761">
+  <meta property="og:title" content="Yildiz · Joyería">
+  <meta property="og:description" content="Joyas delicadas para regalar y regalarte.">
+  <meta property="og:image" content="img/tarjeta.jpg">
+  <meta property="og:type" content="website">
   <link rel="icon" href="img/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,10 +18,15 @@
 </head>
 <body>
 
-  <!-- Símbolo estrella reutilizable -->
+  <a href="#contenido" class="saltar">Saltar al contenido</a>
+
+  <!-- Símbolos reutilizables -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <symbol id="estrella" viewBox="0 0 100 100">
       <path d="M50 0 C54 30 62 44 100 50 C62 56 54 70 50 100 C46 70 38 56 0 50 C38 44 46 30 50 0Z"/>
+    </symbol>
+    <symbol id="corazon" viewBox="0 0 24 24">
+      <path d="M12 20.5C5.5 15.5 3 12.3 3 8.9 3 6.2 5.1 4.2 7.6 4.2c1.8 0 3.400 1 4.400 2.600 1-1.600 2.600-2.600 4.400-2.600 2.500 0 4.600 2 4.600 4.700 0 3.400-2.500 6.600-9 11.600z"/>
     </symbol>
   </svg>
 
@@ -31,14 +41,14 @@
       <label for="menu-toggle" class="menu-boton" aria-hidden="true"><span></span></label>
 
       <a href="#" class="marca" aria-label="Yildiz, inicio">
-        <img src="img/logotipo-cafe.png" alt="Yildiz" width="140" height="56">
+        <img src="img/logotipo-cafe.png" alt="Yildiz" width="900" height="359">
       </a>
 
-      <nav class="nav">
+      <nav class="nav" aria-label="Principal">
         <a href="#coleccion">Colección</a>
         <a href="#regalos">Regalos</a>
         <a href="#historia">Nuestra historia</a>
-        <a href="#contacto">Contacto</a>
+        <a href="#ayuda">Ayuda</a>
       </nav>
 
       <div class="acciones">
@@ -46,19 +56,26 @@
           <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
         </a>
         <a href="#" aria-label="Mi cuenta">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.500-4 4.500-6 8-6s6.500 2 8 6"/></svg>
         </a>
         <a href="#" class="carrito" aria-label="Carrito, 2 productos">
-          <svg viewBox="0 0 24 24"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M5 8h14l-1.200 12H6.200z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
           <span class="carrito__num">2</span>
         </a>
       </div>
     </div>
   </header>
 
-  <main>
+  <main id="contenido">
     <!-- HERO -->
     <section class="hero">
+      <!-- Trazo de estrella de la papelería de marca -->
+      <svg class="hero__trazo" viewBox="0 0 400 400" aria-hidden="true">
+        <path class="trazo-coral" d="M200 30 Q214 186 370 200 Q214 214 200 370 Q186 214 30 200 Q186 186 200 30Z"/>
+        <path class="trazo-crema" d="M70 -20 Q230 120 200 370"/>
+        <path class="trazo-crema" d="M420 60 Q250 150 200 370"/>
+      </svg>
+
       <div class="hero__texto">
         <span class="etiqueta">Nueva colección · Constelación</span>
         <h1>Joyas que brillan <em>como tú</em></h1>
@@ -67,132 +84,163 @@
           <a href="#coleccion" class="boton boton--claro">Ver colección</a>
           <a href="#regalos" class="boton boton--linea">Give &amp; ♡</a>
         </div>
+        <ul class="hero__datos">
+          <li><strong>Plata 925</strong> y baño en oro 18k</li>
+          <li><strong>6 meses</strong> de garantía</li>
+          <li><strong>30 días</strong> para cambios</li>
+        </ul>
       </div>
+
       <div class="hero__imagen">
-        <img src="img/tarjeta.jpg" alt="Modelo luciendo anillos y pulsera de Yildiz">
-        <img src="img/isotipo-crema.png" alt="" class="hero__sello" aria-hidden="true">
+        <div class="hero__arco">
+          <img src="img/tarjeta.jpg" alt="Modelo luciendo anillos y pulsera de Yildiz" width="1188" height="848" fetchpriority="high">
+        </div>
+        <img src="img/isotipo-crema.png" alt="" class="hero__sello" aria-hidden="true" width="900" height="839">
       </div>
     </section>
 
-    <!-- BENEFICIOS -->
-    <section class="beneficios">
-      <div class="contenedor beneficios__grid">
-        <div class="beneficio">
-          <svg class="ico-estrella"><use href="#estrella"/></svg>
-          <h3>Plata 925 y baño en oro</h3>
-          <p>Materiales nobles e hipoalergénicos.</p>
-        </div>
-        <div class="beneficio">
-          <svg class="ico-estrella"><use href="#estrella"/></svg>
-          <h3>Empaque de regalo</h3>
-          <p>Cada pedido llega listo para regalar.</p>
-        </div>
-        <div class="beneficio">
-          <svg class="ico-estrella"><use href="#estrella"/></svg>
-          <h3>Garantía de 6 meses</h3>
-          <p>Cuidamos cada pieza contigo.</p>
-        </div>
-        <div class="beneficio">
-          <svg class="ico-estrella"><use href="#estrella"/></svg>
-          <h3>Cambios sin costo</h3>
-          <p>Hasta 30 días después de tu compra.</p>
-        </div>
+    <!-- CINTA DE MARCA -->
+    <div class="cinta" aria-hidden="true">
+      <div class="cinta__pista">
+        <span>give &amp; ♡</span><svg><use href="#estrella"/></svg>
+        <span>yildiz</span><svg><use href="#estrella"/></svg>
+        <span>dreams</span><svg><use href="#estrella"/></svg>
+        <span>brilla como tú</span><svg><use href="#estrella"/></svg>
+        <span>give &amp; ♡</span><svg><use href="#estrella"/></svg>
+        <span>yildiz</span><svg><use href="#estrella"/></svg>
+        <span>dreams</span><svg><use href="#estrella"/></svg>
+        <span>brilla como tú</span><svg><use href="#estrella"/></svg>
       </div>
-    </section>
+    </div>
 
     <!-- CATEGORÍAS -->
     <section class="categorias contenedor" aria-label="Categorías">
-      <a href="#coleccion" class="categoria categoria--durazno">
+      <a href="#coleccion" class="categoria categoria--durazno revelar">
         <svg viewBox="0 0 120 120" class="dibujo"><circle cx="60" cy="70" r="30"/><path d="M48 42 L60 26 L72 42"/><path d="M52 34 h16"/></svg>
         <span>Anillos</span>
+        <small>Desde $24.900</small>
       </a>
-      <a href="#coleccion" class="categoria categoria--coral">
+      <a href="#coleccion" class="categoria categoria--coral revelar">
         <svg viewBox="0 0 120 120" class="dibujo"><path d="M20 20 Q60 95 100 20"/><path d="M60 77 L52 89 L60 101 L68 89Z"/></svg>
         <span>Collares</span>
+        <small>Desde $32.900</small>
       </a>
-      <a href="#coleccion" class="categoria categoria--turquesa">
+      <a href="#coleccion" class="categoria categoria--turquesa revelar">
         <svg viewBox="0 0 120 120" class="dibujo"><path d="M40 20 v14"/><circle cx="40" cy="48" r="12"/><path d="M80 20 v14"/><circle cx="80" cy="48" r="12"/><path d="M40 60 L40 90 M80 60 L80 90"/><circle cx="40" cy="95" r="5"/><circle cx="80" cy="95" r="5"/></svg>
         <span>Aretes</span>
+        <small>Desde $19.900</small>
       </a>
-      <a href="#coleccion" class="categoria categoria--verde">
+      <a href="#coleccion" class="categoria categoria--verde revelar">
         <svg viewBox="0 0 120 120" class="dibujo"><ellipse cx="60" cy="62" rx="40" ry="24"/><ellipse cx="60" cy="62" rx="32" ry="17"/><path d="M60 30 C62 40 66 43 74 45 C66 47 62 50 60 60 C58 50 54 47 46 45 C54 43 58 40 60 30Z" class="relleno"/></svg>
         <span>Pulseras</span>
+        <small>Desde $27.900</small>
       </a>
     </section>
 
     <!-- COLECCIÓN -->
     <section id="coleccion" class="coleccion contenedor">
-      <div class="titulo-seccion">
-        <img src="img/isotipo-cafe.png" alt="" aria-hidden="true">
+      <div class="titulo-seccion revelar">
+        <img src="img/isotipo-cafe.png" alt="" aria-hidden="true" width="900" height="839" loading="lazy">
         <h2>Los más queridos</h2>
         <p>Nuestras piezas favoritas para brillar todos los días.</p>
       </div>
 
       <div class="productos">
-        <article class="producto">
+        <article class="producto revelar">
           <div class="producto__img fondo-durazno">
             <span class="producto__tag">Nuevo</span>
+            <label class="fav"><input type="checkbox" aria-label="Guardar Anillo Estrella Polar en favoritos"><svg><use href="#corazon"/></svg></label>
             <svg viewBox="0 0 120 120" class="dibujo"><circle cx="60" cy="66" r="28"/><circle cx="60" cy="66" r="24"/><path d="M60 26 C62 34 65 36 72 38 C65 40 62 42 60 50 C58 42 55 40 48 38 C55 36 58 34 60 26Z" class="relleno"/></svg>
+            <svg class="destello destello--1"><use href="#estrella"/></svg>
+            <svg class="destello destello--2"><use href="#estrella"/></svg>
+            <a href="#" class="producto__vista">Vista rápida</a>
           </div>
-          <h3>Anillo Estrella Polar</h3>
+          <div class="producto__fila">
+            <h3>Anillo Estrella Polar</h3>
+            <p class="precio">$34.900</p>
+          </div>
           <p class="producto__desc">Plata 925 con baño en oro 18k</p>
-          <p class="precio">$34.900</p>
           <a href="#" class="boton boton--cafe boton--bloque">Agregar al carrito</a>
         </article>
 
-        <article class="producto">
-          <div class="producto__img fondo-crema">
+        <article class="producto revelar">
+          <div class="producto__img fondo-blanco">
+            <label class="fav"><input type="checkbox" aria-label="Guardar Collar Constelación en favoritos"><svg><use href="#corazon"/></svg></label>
             <svg viewBox="0 0 120 120" class="dibujo"><path d="M18 14 Q60 100 102 14"/><path d="M60 72 C62 80 65 82 73 84 C65 86 62 88 60 96 C58 88 55 86 47 84 C55 82 58 80 60 72Z" class="relleno"/></svg>
+            <svg class="destello destello--1"><use href="#estrella"/></svg>
+            <svg class="destello destello--2"><use href="#estrella"/></svg>
+            <a href="#" class="producto__vista">Vista rápida</a>
           </div>
-          <h3>Collar Constelación</h3>
+          <div class="producto__fila">
+            <h3>Collar Constelación</h3>
+            <p class="precio">$42.500</p>
+          </div>
           <p class="producto__desc">Cadena fina con dije estrella</p>
-          <p class="precio">$42.500</p>
           <a href="#" class="boton boton--cafe boton--bloque">Agregar al carrito</a>
         </article>
 
-        <article class="producto">
+        <article class="producto revelar">
           <div class="producto__img fondo-turquesa">
-            <span class="producto__tag producto__tag--coral">Favorito</span>
+            <span class="producto__tag producto__tag--verde">Favorito</span>
+            <label class="fav"><input type="checkbox" aria-label="Guardar Aretes Lucero en favoritos"><svg><use href="#corazon"/></svg></label>
             <svg viewBox="0 0 120 120" class="dibujo"><circle cx="40" cy="40" r="10"/><circle cx="80" cy="40" r="10"/><path d="M40 50 v18 M80 50 v18"/><path d="M40 70 C42 78 44 80 50 82 C44 84 42 86 40 94 C38 86 36 84 30 82 C36 80 38 78 40 70Z" class="relleno"/><path d="M80 70 C82 78 84 80 90 82 C84 84 82 86 80 94 C78 86 76 84 70 82 C76 80 78 78 80 70Z" class="relleno"/></svg>
+            <svg class="destello destello--1"><use href="#estrella"/></svg>
+            <svg class="destello destello--2"><use href="#estrella"/></svg>
+            <a href="#" class="producto__vista">Vista rápida</a>
           </div>
-          <h3>Aretes Lucero</h3>
+          <div class="producto__fila">
+            <h3>Aretes Lucero</h3>
+            <p class="precio">$29.900</p>
+          </div>
           <p class="producto__desc">Colgantes livianos, baño en oro</p>
-          <p class="precio">$29.900</p>
           <a href="#" class="boton boton--cafe boton--bloque">Agregar al carrito</a>
         </article>
 
-        <article class="producto">
+        <article class="producto revelar">
           <div class="producto__img fondo-coral">
+            <span class="producto__tag">−16%</span>
+            <label class="fav"><input type="checkbox" aria-label="Guardar Pulsera Vía Láctea en favoritos"><svg><use href="#corazon"/></svg></label>
             <svg viewBox="0 0 120 120" class="dibujo"><ellipse cx="60" cy="60" rx="42" ry="26"/><circle cx="34" cy="74" r="3" class="relleno"/><circle cx="60" cy="86" r="3" class="relleno"/><circle cx="86" cy="74" r="3" class="relleno"/></svg>
+            <svg class="destello destello--1"><use href="#estrella"/></svg>
+            <svg class="destello destello--2"><use href="#estrella"/></svg>
+            <a href="#" class="producto__vista">Vista rápida</a>
           </div>
-          <h3>Pulsera Vía Láctea</h3>
+          <div class="producto__fila">
+            <h3>Pulsera Vía Láctea</h3>
+            <p class="precio"><span class="precio__antes">$38.000</span> $31.900</p>
+          </div>
           <p class="producto__desc">Eslabones delicados, ajustable</p>
-          <p class="precio"><span class="precio__antes">$38.000</span> $31.900</p>
           <a href="#" class="boton boton--cafe boton--bloque">Agregar al carrito</a>
         </article>
       </div>
+
+      <p class="coleccion__mas revelar"><a href="#" class="enlace">Ver toda la colección <span aria-hidden="true">→</span></a></p>
     </section>
 
     <!-- REGALOS -->
     <section id="regalos" class="regalos">
       <div class="contenedor regalos__grid">
-        <div class="regalos__texto">
-          <span class="etiqueta etiqueta--cafe">Give &amp; ♡</span>
+        <div class="regalos__texto revelar">
+          <span class="etiqueta etiqueta--coral">Give &amp; ♡</span>
           <h2>Cada joya llega lista para regalar</h2>
           <p>Elige el color de tu caja y agrega una tarjeta con tu mensaje. Nosotros nos encargamos del resto para que solo tengas que entregarla.</p>
-          <ul class="colores">
-            <li><span style="--c: var(--cafe)"></span>Café</li>
-            <li><span style="--c: var(--durazno)"></span>Durazno</li>
-            <li><span style="--c: var(--coral)"></span>Coral</li>
-            <li><span style="--c: var(--verde)"></span>Turquesa</li>
-          </ul>
+
+          <fieldset class="colores">
+            <legend>Elige el color de tu caja</legend>
+            <label><input type="radio" name="caja" id="caja-cafe" checked><span style="--c: var(--cafe)"></span>Café</label>
+            <label><input type="radio" name="caja" id="caja-durazno"><span style="--c: var(--durazno)"></span>Durazno</label>
+            <label><input type="radio" name="caja" id="caja-coral"><span style="--c: var(--coral)"></span>Coral</label>
+            <label><input type="radio" name="caja" id="caja-turquesa"><span style="--c: var(--verde)"></span>Turquesa</label>
+          </fieldset>
+
           <a href="#" class="boton boton--cafe">Armar mi regalo</a>
         </div>
-        <div class="regalos__galeria">
-          <img src="img/caja-cafe.jpg" alt="Caja de regalo Yildiz color café">
-          <img src="img/caja-turquesa.jpg" alt="Caja de regalo Yildiz color turquesa">
-          <img src="img/caja-coral.jpg" alt="Caja de regalo Yildiz color coral">
-          <img src="img/caja-beige.jpg" alt="Caja de regalo Yildiz color durazno">
+
+        <div class="regalos__visor revelar">
+          <img class="caja caja--cafe" src="img/caja-cafe.jpg" alt="Caja de regalo Yildiz color café" width="1188" height="845" loading="lazy">
+          <img class="caja caja--durazno" src="img/caja-beige.jpg" alt="Caja de regalo Yildiz color durazno" width="1188" height="845" loading="lazy">
+          <img class="caja caja--coral" src="img/caja-coral.jpg" alt="Caja de regalo Yildiz color coral" width="1188" height="845" loading="lazy">
+          <img class="caja caja--turquesa" src="img/caja-turquesa.jpg" alt="Caja de regalo Yildiz color turquesa" width="1188" height="845" loading="lazy">
         </div>
       </div>
     </section>
@@ -200,10 +248,10 @@
     <!-- HISTORIA -->
     <section id="historia" class="historia">
       <div class="historia__imagen">
-        <img src="img/logo-metal.jpg" alt="Logotipo Yildiz en relieve metálico">
+        <img src="img/logo-metal.jpg" alt="Logotipo Yildiz en relieve metálico" width="1314" height="876" loading="lazy">
       </div>
-      <div class="historia__texto">
-        <img src="img/isotipo-crema.png" alt="" class="historia__iso" aria-hidden="true">
+      <div class="historia__texto revelar">
+        <img src="img/isotipo-crema.png" alt="" class="historia__iso" aria-hidden="true" width="900" height="839" loading="lazy">
         <h2>Yildiz significa estrella</h2>
         <p>Nacimos con una idea simple: que cada persona tiene su propio brillo. Diseñamos joyas minimalistas y atemporales, pensadas para acompañar tus momentos importantes y los cotidianos.</p>
         <p>Cada pieza se termina a mano y se empaca con el mismo cariño con el que fue creada.</p>
@@ -211,17 +259,48 @@
       </div>
     </section>
 
+    <!-- AYUDA -->
+    <section id="ayuda" class="ayuda contenedor">
+      <div class="ayuda__imagen revelar">
+        <img src="img/papel.jpg" alt="Logotipo Yildiz grabado sobre papel" width="1188" height="1065" loading="lazy">
+      </div>
+      <div class="ayuda__texto revelar">
+        <span class="etiqueta etiqueta--coral">Ayuda</span>
+        <h2>Preguntas frecuentes</h2>
+
+        <details name="faq" open>
+          <summary>¿Cómo cuido mis joyas?</summary>
+          <p>Guárdalas en su caja, lejos de la humedad, y evita el contacto con perfumes, cremas y agua de mar o piscina. Límpialas con un paño suave y seco.</p>
+        </details>
+        <details name="faq">
+          <summary>¿Cuánto tarda el envío?</summary>
+          <p>Despachamos en 1 a 2 días hábiles. El tiempo de entrega depende de tu ciudad y lo verás antes de pagar.</p>
+        </details>
+        <details name="faq">
+          <summary>¿Puedo cambiar una pieza?</summary>
+          <p>Sí, tienes 30 días desde que recibes tu pedido para cambiarla sin costo, siempre que esté sin uso y en su empaque original.</p>
+        </details>
+        <details name="faq">
+          <summary>¿Puedo enviar un regalo con mensaje?</summary>
+          <p>Claro. Al armar tu regalo eliges el color de la caja y escribes la tarjeta; el pedido llega sin precios a la vista.</p>
+        </details>
+      </div>
+    </section>
+
     <!-- NEWSLETTER -->
     <section class="newsletter">
-      <div class="contenedor newsletter__caja">
-        <svg class="newsletter__estrella"><use href="#estrella"/></svg>
-        <h2>Únete a nuestra constelación</h2>
-        <p>Recibe lanzamientos, ofertas exclusivas y un 10% de descuento en tu primera compra.</p>
-        <form class="newsletter__form" action="#" onsubmit="return false;">
-          <label for="correo" class="oculto">Correo electrónico</label>
-          <input type="email" id="correo" placeholder="Tu correo electrónico" required>
-          <button type="submit" class="boton boton--cafe">Suscribirme</button>
-        </form>
+      <div class="contenedor">
+        <div class="newsletter__caja revelar">
+          <svg class="newsletter__estrella newsletter__estrella--1" aria-hidden="true"><use href="#estrella"/></svg>
+          <svg class="newsletter__estrella newsletter__estrella--2" aria-hidden="true"><use href="#estrella"/></svg>
+          <h2>Únete a nuestra constelación</h2>
+          <p>Recibe lanzamientos, ofertas exclusivas y un 10% de descuento en tu primera compra.</p>
+          <form class="newsletter__form" action="#" onsubmit="return false;">
+            <label for="correo" class="oculto">Correo electrónico</label>
+            <input type="email" id="correo" placeholder="Tu correo electrónico" autocomplete="email" required>
+            <button type="submit" class="boton boton--claro">Suscribirme</button>
+          </form>
+        </div>
       </div>
     </section>
   </main>
@@ -230,37 +309,38 @@
   <footer id="contacto" class="pie">
     <div class="contenedor pie__grid">
       <div class="pie__marca">
-        <img src="img/logotipo-crema.png" alt="Yildiz" width="150">
+        <img src="img/logotipo-crema.png" alt="Yildiz" width="900" height="359" loading="lazy">
         <p>Joyas delicadas para regalar y regalarte.</p>
         <div class="redes">
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" class="relleno"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.500" cy="6.500" r=".6" class="relleno"/></svg></a>
           <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></svg></a>
-          <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.5 3 2.5 5 5.5 5"/></svg></a>
+          <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M14 3v11.500a3.500 3.500 0 1 1-3.500-3.500"/><path d="M14 3c.5 3 2.500 5 5.500 5"/></svg></a>
         </div>
       </div>
-      <div>
-        <h4>Tienda</h4>
+      <nav aria-label="Tienda">
+        <h3>Tienda</h3>
         <a href="#coleccion">Anillos</a>
         <a href="#coleccion">Collares</a>
         <a href="#coleccion">Aretes</a>
         <a href="#coleccion">Pulseras</a>
-      </div>
+      </nav>
+      <nav aria-label="Ayuda">
+        <h3>Ayuda</h3>
+        <a href="#ayuda">Envíos</a>
+        <a href="#ayuda">Cambios y devoluciones</a>
+        <a href="#ayuda">Cuidado de tus joyas</a>
+        <a href="#ayuda">Preguntas frecuentes</a>
+      </nav>
       <div>
-        <h4>Ayuda</h4>
-        <a href="#">Envíos</a>
-        <a href="#">Cambios y devoluciones</a>
-        <a href="#">Cuidado de tus joyas</a>
-        <a href="#">Preguntas frecuentes</a>
-      </div>
-      <div>
-        <h4>Contacto</h4>
+        <h3>Contacto</h3>
         <a href="mailto:hola@yildiz.com">hola@yildiz.com</a>
         <a href="#">www.yildiz.com</a>
-        <a href="#">Lunes a viernes, 9:00 a 18:00</a>
+        <p>Lunes a viernes, 9:00 a 18:00</p>
       </div>
     </div>
     <div class="contenedor pie__legal">
       <p>© 2026 Yildiz. Todos los derechos reservados.</p>
+      <a href="#" class="pie__arriba">Volver arriba ↑</a>
     </div>
   </footer>
 
